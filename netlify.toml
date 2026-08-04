@@ -6,7 +6,8 @@
   publish = "out"
 
 [build.environment]
-  NODE_VERSION = "20"
+  # Next 16 requires Node >=20.9; 22 is the current LTS and safely clear of it.
+  NODE_VERSION = "22"
 
 # Redirect leftover WordPress URLs so old links don't 404
 [[redirects]]
