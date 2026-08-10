@@ -28,7 +28,7 @@ export default function ContactPage() {
               </div>
               <h3>Areas We Serve</h3>
               <p>
-                Based in Charlotte, proudly serving the North Carolina &amp; South Carolina area.
+                Based in Charlotte, proudly serving the lower 48 States and Canada.
               </p>
             </div>
             <div className="info-card reveal">
