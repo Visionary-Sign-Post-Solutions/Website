@@ -504,6 +504,35 @@ a:hover { color: var(--violet-400); }
 }
 .form-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 20px; }
 .form-grid .full { grid-column: 1 / -1; }
+.product-request-form { display: grid; gap: 34px; }
+.required-note {
+  padding: 14px 16px;
+  border-left: 4px solid var(--violet-500);
+  border-radius: 8px;
+  background: var(--bg-soft);
+  color: var(--ink-soft);
+  font-size: 14px;
+}
+.form-section {
+  min-width: 0;
+  margin: 0;
+  padding: 0;
+  border: 0;
+}
+.form-section legend {
+  width: 100%;
+  padding: 0 0 10px;
+  border-bottom: 1px solid var(--line);
+  color: var(--navy-800);
+  font-family: var(--font-head);
+  font-size: 1.15rem;
+  font-weight: 700;
+}
+.form-section-intro {
+  margin: 10px 0 20px;
+  color: var(--ink-soft);
+  font-size: 14.5px;
+}
 .field label {
   display: block;
   font-family: var(--font-head);
@@ -511,6 +540,19 @@ a:hover { color: var(--violet-400); }
   font-size: 14px;
   margin-bottom: 8px;
 }
+.required-mark,
+.optional-mark {
+  display: inline-block;
+  margin-left: 6px;
+  font-family: var(--font-body);
+  font-size: 10.5px;
+  font-weight: 600;
+  letter-spacing: 0.03em;
+  text-transform: uppercase;
+  vertical-align: 1px;
+}
+.required-mark { color: #7040d8; }
+.optional-mark { color: var(--ink-soft); font-weight: 500; }
 .field input,
 .field select,
 .field textarea {
@@ -525,6 +567,30 @@ a:hover { color: var(--violet-400); }
   transition: border-color 0.15s ease, box-shadow 0.15s ease;
 }
 .field textarea { min-height: 140px; resize: vertical; }
+.field-help {
+  margin-top: 7px;
+  color: var(--ink-soft);
+  font-size: 12.5px;
+  line-height: 1.5;
+}
+.dimension-grid {
+  display: grid;
+  grid-template-columns: repeat(4, minmax(0, 1fr));
+  gap: 16px;
+}
+.form-section-tail { margin-top: 20px; }
+.form-actions {
+  display: flex;
+  align-items: center;
+  gap: 20px;
+  padding-top: 4px;
+}
+.form-actions p {
+  max-width: 470px;
+  color: var(--ink-soft);
+  font-size: 12.5px;
+  line-height: 1.5;
+}
 .field input:focus,
 .field select:focus,
 .field textarea:focus {
@@ -534,7 +600,18 @@ a:hover { color: var(--violet-400); }
   background: #fff;
 }
 .form-note { font-size: 13.5px; color: var(--ink-soft); margin-top: 16px; }
-@media (max-width: 640px) { .form-grid { grid-template-columns: 1fr; } .form-card { padding: 30px 22px; } }
+@media (max-width: 760px) {
+  .dimension-grid { grid-template-columns: 1fr 1fr; }
+}
+@media (max-width: 640px) {
+  .form-grid,
+  .dimension-grid { grid-template-columns: 1fr; }
+  .form-grid .full { grid-column: auto; }
+  .form-card { padding: 30px 22px; }
+  .product-request-form { gap: 30px; }
+  .form-actions { align-items: stretch; flex-direction: column; }
+  .form-actions .btn { width: 100%; }
+}
 
 /* ---------- Contact info cards ---------- */
 .info-grid {

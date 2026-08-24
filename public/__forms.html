@@ -1,0 +1,42 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <title>Form registration</title>
+  </head>
+  <body>
+    <!-- Static declarations let Netlify register fields emitted by the Next.js export. -->
+    <form name="contact" method="POST" data-netlify="true" netlify-honeypot="bot-field" hidden>
+      <input type="hidden" name="form-name" value="contact" />
+      <input name="bot-field" />
+      <input name="name" />
+      <input name="company" />
+      <input type="email" name="email" />
+      <input type="tel" name="phone" />
+      <select name="product-type"><option>Other / Not sure yet</option></select>
+      <input type="number" name="quantity" />
+      <input name="known-size" />
+      <input type="number" name="width" />
+      <input type="number" name="height" />
+      <input type="number" name="depth" />
+      <select name="dimension-unit"><option>Inches</option></select>
+      <input name="material-finish" />
+      <textarea name="intended-use"></textarea>
+      <select name="timeline"><option>Flexible / Not sure</option></select>
+      <input name="project-location" />
+      <textarea name="details"></textarea>
+    </form>
+
+    <form name="project-quote" method="POST" data-netlify="true" netlify-honeypot="bot-field" hidden>
+      <input type="hidden" name="form-name" value="project-quote" />
+      <input name="bot-field" />
+      <input name="name" />
+      <input name="company" />
+      <input type="email" name="email" />
+      <input type="tel" name="phone" />
+      <select name="project-type"><option>Posts</option></select>
+      <select name="timeline"><option>Flexible</option></select>
+      <textarea name="details"></textarea>
+    </form>
+  </body>
+</html>

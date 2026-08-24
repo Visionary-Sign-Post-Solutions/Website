@@ -4,9 +4,9 @@ import { site } from '../../lib/site';
 import { PinIcon, PhoneIcon, ClockIcon } from '../../components/Icons';
 
 export const metadata = {
-  title: 'Contact',
+  title: 'Request Product Information & Quotes',
   description:
-    'Contact Visionary Sign & Post Solutions in Charlotte, NC — serving North and South Carolina. Call 704-302-2860 or send us a message.',
+    'Request product information or a quote from Visionary Sign & Post Solutions. Share product type, quantity, dimensions, intended use, and project details.',
 };
 
 const MAP_SRC =
@@ -15,8 +15,9 @@ const MAP_SRC =
 export default function ContactPage() {
   return (
     <>
-      <PageHero title="Let's Keep In Touch!" crumb="Contact">
-        Questions about a product, a quote, or a custom build — we&apos;re happy to help.
+      <PageHero title="Tell Us What You Need" crumb="Contact">
+        Share what you&apos;d like to order and how you&apos;ll use it. We&apos;ll review the details
+        and follow up with the right options and next steps.
       </PageHero>
 
       <section className="section">
@@ -70,12 +71,19 @@ export default function ContactPage() {
       <section className="section soft">
         <div className="container">
           <div className="section-head center reveal">
-            <span className="kicker">Get in Touch</span>
-            <h2>Any Questions? Write to Us</h2>
-            <p>Write down and send us a message — we&apos;ll get back to you shortly.</p>
+            <span className="kicker">Product Request</span>
+            <h2>Help Us Understand Your Order</h2>
+            <p>
+              Tell us the product, quantity, size, dimensions, and intended use. It&apos;s okay if
+              some specifications are still estimates—we&apos;ll help you work through them.
+            </p>
           </div>
-          <div className="form-card reveal" style={{ maxWidth: 760, margin: '0 auto' }}>
+          <div className="form-card reveal" style={{ maxWidth: 920, margin: '0 auto' }}>
             <ContactForm />
+            <p className="form-note">
+              We typically respond within one business day. For time-sensitive requests, call{' '}
+              <a href={`tel:${site.phone}`}>{site.phone}</a>.
+            </p>
           </div>
         </div>
       </section>
